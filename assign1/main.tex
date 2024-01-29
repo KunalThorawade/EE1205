@@ -69,40 +69,29 @@ EE23BTECH11035
  \renewcommand{\thefigure}{\theenumi}
  \renewcommand{\thetable}{\theenumi}
  %\renewcommand{\theequation}{\theenumi}
- \begin{flushleft}
 
-	 \section{\Large Question:}  Ramkali saved Rs 5 in the first week of a year and then increased her weekly savings by Rs 1.75. If in the $n$th week, her weekly savings become Rs 20.75, find $n$.
+ \section{\Large Question:}  Ramkali saved Rs 5 in the first week of a year and then increased her weekly savings by Rs 1.75. If in the $n$th week, her weekly savings become Rs 20.75, find $n$.
 
-	 \section{\Large Solution:} 
-	 \input{tables/table1}
+ \section{\Large Solution:} 
+ \input{tables/table1}
 
- \end{flushleft}
- \begin{center}
+ \begin{align} 
+	 x(n) &= x(0) + (n)(d)
+	 \\ 20.75 &= 5 + (n)(1.75)  
+	 \\ \implies 15.75 &= (n)(1.75)
+	 \\ \implies n &= \frac{15.75}{1.75}
+	 \\ \implies n &= 9
+	 \\x(n) &= 5u(n) + 1.75nu(n)
+ \end{align}
+ The Z-transform of a sequence $x(n)$ is given by:
+ \begin{align}
+	  X(z) &= \frac{5z^{-1}}{1-z^{-1}}+\frac{1.75z^{-1}}{(1-z^{-1})^{2}} ; ROC : |z| > 1
+ \end{align}
 
-	 \begin{align} 
-		 x(n) &= x(0) + (n)(d)
-		 \\ 20.75 &= 5 + (n)(1.75)  
-		 \\ \implies 15.75 &= (n)(1.75)
-		 \\ \implies n &= \frac{15.75}{1.75}
-		 \\ \implies n &= 9
-	 \end{align}
- \end{center}
-
- \begin{center}
-	 \begin{align}
-		 x(n) &= 5u(n) + 1.75nu(n)
-	 \end{align}
-	 \\The Z-transform of a sequence $x(n)$ is given by:
-	 \begin{align}
-		  X(z) &= \frac{5z^{-1}}{1-z^{-1}}+\frac{1.75z^{-1}}{(1-z^{-1})^{2}} ; ROC : |z| > 1
-	 \end{align}
-
-	 \begin{figure}
-		     \centering
-		         \includegraphics[width = 8cm]{figs/fig1.png}
-			     \caption{Plot of $x(n) = 5 + 1.75n$}
-			         \label{fig:enter-label}
-	 \end{figure}
-
- \end{center}
- \end{document}
+ \begin{figure}
+	     \centering
+	         \includegraphics[width = 8cm]{figs/fig1.png}
+		     \caption{Plot of $x(n) = 5 + 1.75n$}
+		         \label{fig:enter-label}
+ \end{figure}
+\end{document}
