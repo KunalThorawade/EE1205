@@ -44,13 +44,13 @@
 \vspace{3cm}
 
 \title{
-%	\logo{
-Assignment-2
+	%	\logo{
+	Assignment-2
 
-\large{EE:1205 Signals and Systems}
+	\large{EE:1205 Signals and Systems}
 
-Indian Institute of Technology, Hyderabad
-%	}
+	Indian Institute of Technology, Hyderabad
+	%	}
 }
 \author{Kunal Thorawade
 
@@ -66,32 +66,28 @@ EE23BTECH11035
 
 \bigskip
  
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\arabic{table}}
-%\renewcommand{\theequation}{\theenumi}
+ \renewcommand{\thefigure}{\theenumi}
+ \renewcommand{\thetable}{\arabic{table}}
+ %\renewcommand{\theequation}{\theenumi}
 
-\section{Question:}
-What will Rs 500 amounts to in 10 years after its deposit in a bank which pays annual interest rate of 10$\%$ compounded annually?
+ \section{Question:}
+ What will Rs 500 amounts to in 10 years after its deposit in a bank which pays annual interest rate of 10$\%$ compounded annually?
 
-\section{Solution}
-\input{tables/table2}
-From above table:
+ \section{Solution}
 
-The series is 550, 605, 665.5...
+ \input{tables/table1}
 
-\input{tables/table1}
-From \tabref{tab:11.9.3.31}:
+ The Z-transform of a sequence $x(n)$ is given by:
 
-The Z-transform of a sequence $x(n)$ is given by:
+ \begin{align}
+	     x(n) &= 500(1.1)^{n}u(n)
+	       \\  X(Z) &= \frac{500}{1 - (1.1)z^{-1}} ; |z| > 1.1
+ \end{align}
 
-\begin{align}
-    X(Z) = \frac{550}{1 - (1.1)z^{-1}} ; |z| > 1.1
-\end{align}
-
-\begin{figure}
-    \centering
-    \includegraphics[width = 8cm]{figs/fig1.png}
-    \caption{Plot of $x(n) = 550(1.1)^n$}
-    \label{fig:enter-label}
-\end{figure}
+ \begin{figure}
+	     \centering
+	         \includegraphics[width = 8cm]{figs/fig1.png}
+		     \caption{Plot of $x(n) = 500(1.1)^n$}
+		         \label{fig:enter-label}
+ \end{figure}
 \end{document}
