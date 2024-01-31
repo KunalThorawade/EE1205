@@ -1,15 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Read data from result.dat file
-data = np.loadtxt("result.dat", skiprows=1)
+# Read data from result.dat
+data = np.genfromtxt('result.dat', skip_header=1)
 
 # Extract columns
 n_values = data[:, 0]
-amounts = data[:, 1]
+amount_values = data[:, 1]
 
-# Plot the results
-plt.plot(n_values, amounts, marker='o', linestyle='-', color='b')
+# Stem plot
+plt.stem(n_values, amount_values, basefmt='b-', linefmt='r-', markerfmt='ro', use_line_collection=True)
 plt.xlabel('Years (n)')
 plt.ylabel('Amount')
 plt.grid(True)
